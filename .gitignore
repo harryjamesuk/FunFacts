@@ -26,6 +26,8 @@ proguard/
 # Log Files
 *.log
 
+# Workspace file
+.idea/workspace.xml
 
 ### Windows ###
 # Windows image file caches
