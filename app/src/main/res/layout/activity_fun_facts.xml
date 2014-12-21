@@ -6,13 +6,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".FunFactsActivity">
+    tools:context=".FunFactsActivity"
+    android:background="#51b46d">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/did_you_know"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="#80ffffff" />
 
     <TextView
         android:id="@+id/factTextView"
@@ -22,7 +24,8 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:text="@string/fact_ants_stretch_in_morning"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/showFactButton"
@@ -30,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/bttn_show_fact" />
+        android:text="@string/bttn_show_fact"
+        android:background="@android:color/white" />
 
 </RelativeLayout>
