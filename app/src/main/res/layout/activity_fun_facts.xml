@@ -1,22 +1,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".FunFactsActivity">
-
-    <TextView android:text="@string/did_you_know" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp" />
+    tools:context=".FunFactsActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fact_ants_stretch_in_morning"
-        android:id="@+id/textView"
-        android:layout_centerVertical="true"
+        android:text="@string/did_you_know"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/factTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="@string/fact_ants_stretch_in_morning"
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/showFactButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Show another Fun Fact" />
 
 </RelativeLayout>
