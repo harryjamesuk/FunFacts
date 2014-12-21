@@ -30,6 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Show another Fun Fact" />
+        android:text="@string/bttn_show_fact" />
 
 </RelativeLayout>
