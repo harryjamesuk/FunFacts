@@ -30,7 +30,25 @@ public class FunFactsActivity extends ActionBarActivity {
                 // We'll randomly select a fact
                 Random randomGenerator = new Random(); // Construct a new random number generator.
                 int randomNumber = randomGenerator.nextInt(3);
-                fact = randomNumber + "";
+
+                /* Convert the randomNumber to a text fact
+                 * 0 = Ants stretch when they wake up in the morning.
+                 * 1 = Ostriches can run faster than horses.
+                 * 2 = Olympic gold medals are actually made mostly of silver.
+                 */
+
+                switch(randomNumber) {
+                    case 0:
+                        fact = "Ants stretch when they wake up in the morning.";
+                        break;
+                    case 1:
+                        fact = "Ostriches can run faster than horses.";
+                        break;
+                    case 2:
+                        fact = "Olympic gold medals are actually made mostly of silver.";
+                        break;
+                }
+
                 // Update the label with our dynamic fact
                 factLabel.setText(fact);
             }
