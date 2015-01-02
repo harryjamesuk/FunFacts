@@ -47,6 +47,9 @@ public class FunFactsActivity extends ActionBarActivity {
                     case 2:
                         fact = "Olympic gold medals are actually made mostly of silver.";
                         break;
+                    default:
+                        fact = "Something went wrong!";
+                        break;
                 }
 
                 // Update the label with our dynamic fact
