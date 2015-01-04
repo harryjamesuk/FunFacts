@@ -36,13 +36,14 @@ public class FunFactsActivity extends ActionBarActivity {
                         "The state of Florida is bigger than England.",
                         "Some penguins can leap 2-3 meters out of the water.",
                         "On average, it takes 66 days to form a new habit.",
-                        "Mammoths still walked the earth when the Great Pyramid was being built." };
+                        "Mammoths still walked the earth when the Great Pyramid was being built.",
+                        "Treehouse is not actually in a tree." };
 
                 // The button was clicked so update the factLabel with a new fact.
                 String fact = "";
                 // We'll randomly select a fact
                 Random randomGenerator = new Random(); // Construct a new random number generator.
-                int randomNumber = randomGenerator.nextInt(10);
+                int randomNumber = randomGenerator.nextInt(facts.length);
 
                 /* Convert the randomNumber to a text fact
                  * 0 = Ants stretch when they wake up in the morning.
@@ -50,20 +51,7 @@ public class FunFactsActivity extends ActionBarActivity {
                  * 2 = Olympic gold medals are actually made mostly of silver.
                  */
 
-                switch(randomNumber) {
-                    case 0:
-                        fact = "Ants stretch when they wake up in the morning.";
-                        break;
-                    case 1:
-                        fact = "Ostriches can run faster than horses.";
-                        break;
-                    case 2:
-                        fact = "Olympic gold medals are actually made mostly of silver.";
-                        break;
-                    default:
-                        fact = "Something went wrong!";
-                        break;
-                }
+                fact = facts[randomNumber];
 
                 // Update the label with our dynamic fact
                 factLabel.setText(fact);
