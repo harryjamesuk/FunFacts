@@ -13,6 +13,8 @@ import java.util.Random;
 
 public class FunFactsActivity extends ActionBarActivity {
 
+    private FactBook mFactBook = new FactBook();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +27,11 @@ public class FunFactsActivity extends ActionBarActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String fact = mFactBook.getFact();
+
                 // Update the label with our dynamic fact
-                factLabel.setText("");
+                factLabel.setText(fact);
             }
         };
 
