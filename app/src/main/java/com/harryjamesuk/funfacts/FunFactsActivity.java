@@ -16,6 +16,7 @@ import java.util.Random;
 public class FunFactsActivity extends ActionBarActivity {
 
     private FactBook mFactBook = new FactBook();
+    private ColorWheel mColorWheel = new ColorWheel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class FunFactsActivity extends ActionBarActivity {
 
         // Declare our view variables and assign them the views from the layout file
         final TextView factLabel = (TextView) findViewById(R.id.factTextView);
-        Button showFactButton = (Button) findViewById(R.id.showFactButton);
+        final Button showFactButton = (Button) findViewById(R.id.showFactButton);
         final RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
 
         View.OnClickListener listener = new View.OnClickListener() {
@@ -35,7 +36,9 @@ public class FunFactsActivity extends ActionBarActivity {
 
                 // Update the label with our dynamic fact
                 factLabel.setText(fact);
-                relativeLayout.setBackgroundColor(Color.RED);
+                int color = mColorWheel.getColor();
+                relativeLayout.setBackgroundColor(color);
+                showFactButton.setTextColor(color);
             }
         };
 
