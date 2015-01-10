@@ -47,8 +47,5 @@ public class FunFactsActivity extends ActionBarActivity {
         };
 
         showFactButton.setOnClickListener(listener);
-
-//        Toast.makeText(this, "Yey! Our Activity was created!", Toast.LENGTH_LONG).show();
-        Log.d(TAG, "We're logging from the onCreate() method");
     }
 }
