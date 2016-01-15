@@ -1,26 +1,24 @@
 package com.harryjamesuk.funfacts;
 
-import android.graphics.Color;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Random;
 
 
-public class FunFactsActivity extends ActionBarActivity {
+public class FunFactsActivity extends AppCompatActivity {
 
     public static final String TAG = FunFactsActivity.class.getSimpleName();
+    private static final String KEY_FACT = "KEY_FACT";
+    private static final String KEY_COLOR = "KEY_COLOR";
 
     private FactBook mFactBook = new FactBook();
     private ColorWheel mColorWheel = new ColorWheel();
+
+    private String mFact;
+    private int mColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,16 +34,24 @@ public class FunFactsActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-                String fact = mFactBook.getFact();
+                mFact = mFactBook.getFact();
 
                 // Update the label with our dynamic fact
-                factLabel.setText(fact);
-                int color = mColorWheel.getColor();
-                relativeLayout.setBackgroundColor(color);
-                showFactButton.setTextColor(color);
+                factLabel.setText(mFact);
+                mColor = mColorWheel.getColor();
+                relativeLayout.setBackgroundColor(mColor);
+                showFactButton.setTextColor(mColor);
             }
         };
 
         showFactButton.setOnClickListener(listener);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putString(KEY_FACT, mFact);
+        outState.putInt(KEY_COLOR, mColor);
     }
 }
